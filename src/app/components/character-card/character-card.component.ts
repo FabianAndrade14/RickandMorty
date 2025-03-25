@@ -10,4 +10,15 @@ import { Character } from '../../interfaces/character';
 })
 export class CharacterCardComponent {
   @Input() character!: Character;
+
+  getStatusClass( status: string ): string {
+    switch (status) {
+      case 'Alive':
+        return 'Alive';
+      case 'Dead':
+        return 'Dead';
+      default:
+        return 'unknown';
+    }
+  }
 }

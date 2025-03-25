@@ -1,1 +1,11 @@
-
+<div class="card">
+  <img [src]="character.image" [alt]="character.name" class="character-image" />
+  <div class="card-content">
+    <h3 class="character-name">{{ character.name }}</h3>
+    <p class="character-status">
+      Status:
+      <span [class]="getStatusClass(character.status)">{{ character.status }}</span>
+    </p>
+    <p class="character-species">Species: {{ character.species }}</p>
+  </div>
+</div>

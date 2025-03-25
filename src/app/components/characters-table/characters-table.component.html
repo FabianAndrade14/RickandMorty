@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="title">Rick and Morty Characters</h1>
+
+  <div class="pagination">
+    <button (click)="fetchPreviousPage()" [disabled]="!hasPreviousPage" class="btn">◀ Previous</button>
+    <button (click)="fetchNextPage()" [disabled]="!hasNextPage" class="btn">Next ▶</button>
+  </div>
+
+  <div class="characters-container">
+    <CharacterCard *ngFor="let character of characters" [character]="character"></CharacterCard>
+  </div>
+</div>
